@@ -16,12 +16,13 @@ CREATE TABLE Customers (
 
 CREATE TABLE Orders (
 	order_id INT AUTO_INCREMENT PRIMARY KEY, /* HOW DO I GO ABOUT ADDING PUZZLES TO THIS AS THEY HAVE THEIR OWN TABLE? */
-	shipped BOOlEAN
+	shipped BOOlEAN,
+	pname VARCHAR(255) FOREIGN KEY REFERENCES Puzzles(pname)
 	/*Puzzles!*/
 );
 
 CREATE TABLE Employees (
-	id INT AUTO_INCREMENT PRIMARY KEY,
+	e_id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255),
 	email VARCHAR(255),
 	address VARCHAR(255),
@@ -30,11 +31,11 @@ CREATE TABLE Employees (
 
 CREATE TABLE OrdersPuzzles (
 	order_id INT Foreign KEY,
-	name VARCHAR(255) Foreign KEY
+	pname VARCHAR(255) FOREIGN KEY REFERENCES Puzzles(pname)
 );
 
 CREATE TABLE Puzzles (
-	name VARCHAR(255) PRIMARY KEY,
+	pname VARCHAR(255) PRIMARY KEY,
 	quantity INT,
 	numberofpieces INT,
 	size VARCHAR(255),
@@ -51,15 +52,6 @@ CREATE TABLE Permissions ( /*Need to be able to assign multiple roles to each em
 	role VARCHAR(255) PRIMARY KEY,
 	description VARCHAR(255)
 	);
-
-
-
-
-
-
-
-
-
 
 
 /*Adding the known Customers*/
