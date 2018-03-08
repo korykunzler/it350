@@ -1,6 +1,6 @@
 /* I don't think I have this all set up correctly to reflect the relationships between the different entities.*/
 
-CREATE TABLE Customers (  --This is the start of the database script.
+CREATE TABLE Customers ( 
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255),
 	address VARCHAR(255),
@@ -15,7 +15,8 @@ CREATE TABLE Customers (  --This is the start of the database script.
 )*/
 
 CREATE TABLE Orders (
-	order_id INT AUTO_INCREMENT PRIMARY KEY /* HOW DO I GO ABOUT ADDING PUZZLES TO THIS AS THEY HAVE THEIR OWN TABLE? */
+	order_id INT AUTO_INCREMENT PRIMARY KEY, /* HOW DO I GO ABOUT ADDING PUZZLES TO THIS AS THEY HAVE THEIR OWN TABLE? */
+	shipped BOOlEAN
 	/*Puzzles!*/
 );
 
@@ -25,6 +26,11 @@ CREATE TABLE Employees (
 	email VARCHAR(255),
 	address VARCHAR(255),
 	phone VARCHAR(10)
+);
+
+CREATE TABLE OrdersPuzzles (
+	order_id INT Foreign KEY,
+	name VARCHAR(255) Foreign KEY
 );
 
 CREATE TABLE Puzzles (
