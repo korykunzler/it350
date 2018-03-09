@@ -6,17 +6,18 @@ CREATE TABLE Customers (
 	address VARCHAR(255),
 	phone VARCHAR(10),
 	email VARCHAR(255), /*Separate Entity*/
-	is_subscriber BOOlEAN
+	is_subscriber INT,
+	password VARCHAR(42) /*Set this up to hash under SHA-1*/
 );
 
 /*CREATE TABLE Email (
 	customer_id INT Foreign KEY,
-	is_subscriber BOOlEAN
+	is_subscriber INT
 )*/
 
 CREATE TABLE Orders (
 	order_id INT AUTO_INCREMENT PRIMARY KEY, /* HOW DO I GO ABOUT ADDING PUZZLES TO THIS AS THEY HAVE THEIR OWN TABLE? */
-	shipped BOOlEAN,
+	shipped INT,
 	pname VARCHAR(255) FOREIGN KEY REFERENCES Puzzles(pname)
 	/*Puzzles!*/
 );
@@ -26,7 +27,8 @@ CREATE TABLE Employees (
 	name VARCHAR(255),
 	email VARCHAR(255),
 	address VARCHAR(255),
-	phone VARCHAR(10)
+	phone VARCHAR(10),
+	role VARCHAR(255)
 );
 
 CREATE TABLE OrdersPuzzles (
@@ -53,16 +55,19 @@ CREATE TABLE Permissions ( /*Need to be able to assign multiple roles to each em
 	description VARCHAR(255)
 	);
 
+CREATE TABLE Roles (
+	title varchar(255) PRIMARY KEY,
+);
 
 /*Adding the known Customers*/
-insert into Customers values('1', 'Sally Sue', '123 Easy St. New York, NY 12345', '987-654-3210', 'sallysue@gmail.com', 'TRUE');
+insert into Customers values('0', 'Sally Sue', '123 Easy St. New York, NY 12345', '9876543210', 'sallysue@gmail.com', 'TRUE');
 
 /*Adding the known Orders*/
 /*insert into Orders values();*/ /*TO DO*/
 
 /*Adding the known employees*/
-insert into Employees values('1','Jeff Lastname', 'jeff@piecebypiece.com', '123 Easy St. Lincoln, NE 12345', '123-456-7890');
-insert into Employees values('2','Linsey Secondname', 'linsey@piecebypiece.com', '125 Easy St. Lincoln, NE 12345', '123-345-6789');
+insert into Employees values('1','Jeff Lastname', 'jeff@piecebypiece.com', '123 Easy St. Lincoln, NE 12345', '1234567890');
+insert into Employees values('2','Linsey Secondname', 'linsey@piecebypiece.com', '125 Easy St. Lincoln, NE 12345', '1233456789');
 
 /*Adding the known Puzzles*/
 insert into Puzzles values('Water by the Woods', '3', '500', '24x24', 'Easy', 'Nature');
