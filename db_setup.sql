@@ -1,6 +1,6 @@
 /* I don't think I have this all set up correctly to reflect the relationships between the different entities.*/
 
-CREATE TABLE Customers ( 
+CREATE TABLE Customers (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(255),
 	address VARCHAR(255),
@@ -65,6 +65,8 @@ insert into Customers values('0', 'Sally Sue', '123 Easy St. New York, NY 12345'
 /*Adding the known Orders*/
 /*insert into Orders values();*/ /*TO DO*/
 
+insert into Administrators values('test', 'Unsecure,Iknow', '0');
+
 /*Adding the known employees*/
 insert into Employees values('1','Jeff Lastname', 'jeff@piecebypiece.com', '123 Easy St. Lincoln, NE 12345', '1234567890');
 insert into Employees values('2','Linsey Secondname', 'linsey@piecebypiece.com', '125 Easy St. Lincoln, NE 12345', '1233456789');
@@ -86,6 +88,3 @@ insert into Permissions values('Admin', 'Full read/write on Puzzles');
 insert into Permissions values('Customer', 'Read/edit their own information, NO delete, read their own orders');
 insert into Permissions values('System', 'read quantity and title of puzzles page');
 insert into Permissions values('Shipper', 'Read access to address to ship puzzle, read access to orders')
-
-
-

@@ -1,8 +1,8 @@
 <?php
-$connection = mysqli_connect('localhost', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
+$connection = mysqli_connect('localhost/phpmyadmin', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
 or die("Error connecting to the MySQL server.");
 $database = "it350";
-$table = "Customers";
+$table = "Administrators";
 
 
 if(!$connection) {

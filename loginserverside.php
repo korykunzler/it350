@@ -5,7 +5,6 @@
 
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
-$userID;
 
 if ($connection){
     if (isset($_POST['username']) && !empty($_POST['pwd']))
