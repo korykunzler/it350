@@ -1,4 +1,4 @@
-<form  id="loginform" action="theinsert.php" method="post"><br> <!--This will need to be modified-->
+<form  id="loginform" action="loginserverside.php" method="post"><br> <!--This will need to be modified-->
 
 Please log in to view the admin page.<br><br>
 

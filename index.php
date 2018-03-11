@@ -9,5 +9,7 @@
 	<p> This is going to be my admin site. I want it to be able to show orders for employees to ship them.</P>
 	<p> I also want this to be able to add puzzles to the puzzle database </p>
 
+	<a href="login.php"><button type="button">Login here!</button></a>
+
 	</body>
 </html>
