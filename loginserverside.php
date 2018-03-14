@@ -7,6 +7,7 @@
 echo "Hello!";
 echo $database;
 echo $connection;
+echo "Hi!";
 
 /*
 $connection = mysqli_connect('192.168.50.34/phpmyadmin', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
