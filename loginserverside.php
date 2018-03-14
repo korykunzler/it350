@@ -11,7 +11,7 @@ echo $username;
 echo $hashedpwd;
 echo "<p>Hi!</p>";
 
-/*
+
 $connection = mysqli_connect('192.168.50.34/phpmyadmin', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
 or die("Error connecting to the MySQL server. TEST " + mysqli_connect_error($connection));
 
@@ -19,7 +19,7 @@ or die("Error connecting to the MySQL server. TEST " + mysqli_connect_error($con
 $database = "it350";
 $table = "Administrators";
 
-
+/*
 if(!$connection) {
   die ("Connection to server lost." . mysqli_error($connection));
 }
