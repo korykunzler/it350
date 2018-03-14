@@ -32,8 +32,8 @@ if ($connection){
 	{
 
         //
-        //$sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
-        $sql = "SELECT * FROM Administrators WHERE Username = 'test' AND Password = '4400c2ef10d4772936a0478f62809ed3d29db912'";
+        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
+        //$sql = "SELECT * FROM Administrators WHERE Username = 'test' AND Password = '4400c2ef10d4772936a0478f62809ed3d29db912'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
         echo "SQL: ";
