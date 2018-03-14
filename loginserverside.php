@@ -4,12 +4,12 @@
 <p> Checking connection... </p>
 <?php
 
-echo "<p>Hello!</p>";
+#echo "<p>Hello!</p>";
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
 echo $username;
 echo $hashedpwd;
-echo "<p>Hi!</p>";
+#echo "<p>Hi!</p>";
 
 
 $connection = mysqli_connect('localhost', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
@@ -44,7 +44,7 @@ if ($connection){
         $sql = "SELECT * FROM Administrators WHERE Username = 'test' AND Password = '4400c2ef10d4772936a0478f62809ed3d29db912'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
-        echo "<p>Count: </p>";
+        echo "Count: ";
         echo $count;
         if($count==1)
         {
@@ -56,12 +56,12 @@ if ($connection){
             mysqli_query($db,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
 		header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }else{
-        	echo "Login failed. Sad day. <br>";//php page says login failed
-          echo "<p>Username: </p>";
+        	echo "<br>Login failed. Sad day. <br>";//php page says login failed
+          echo "Username: ";
           echo $username;
-          echo "<p>Result: </p>";
+          echo "<br>Result: ";
           echo $result;
-          echo "<p>Session: </p>";
+          echo "<br>Session: ";
           echo $_SESSION;
         	}
 
