@@ -39,6 +39,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
         echo $count;
 
         if($count==1){
+          echo "Made it in the count test <br>"
 	         session_start();
            $_SESSION['login_user']= $username;
            $_SESSION['loggedin'] = true;
