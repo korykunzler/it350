@@ -53,6 +53,9 @@ if ($connection){
 		header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }else{
         	echo "Login failed. Sad day.";//php page says login failed
+          echo $username;
+          echo $table;
+          echo $_SESSION;
         	}
 
 }
