@@ -11,18 +11,18 @@
 
   <p>Hello. Please enter the puzzle information below.</p><br>
 
-  	Puzzle Name:<br>
-  	<input type="text" name="pname" id="pname" required><br>
-  	Quantity:<br>
-  	<input type="number" name="quantity" id="quantity" required><br>
-  	Number of Pieces:<br>
-  	<input type="number" name="numberofpieces" id="numberofpieces" required><br>
-  	Size:<br>
-  	<input type="text" name="size" id="size" required><br>
-  	Difficulty<br>
-  	<input type="text" name="difficulty" id="difficulty" required><br><br>
-    Theme<br>
-  	<input type="text" name="theme" id="theme" required><br><br>
+  	<p>Puzzle Name:<br>
+  	<input type="text" name="pname" id="pname" required><br></p>
+  	<p>Quantity:<br>
+  	<input type="number" name="quantity" id="quantity" required><br></p>
+  	<p>Number of Pieces:<br>
+  	<input type="number" name="numberofpieces" id="numberofpieces" required><br></p>
+  	<p>Size:<br>
+  	<input type="text" name="size" id="size" required><br></p>
+  	<p>Difficulty:<br>
+  	<input type="text" name="difficulty" id="difficulty" required><br></p>
+    <p>Theme:<br>
+  	<input type="text" name="theme" id="theme" required><br><br></p>
 
 
     <input type="submit" id="submit" value="Submit" onsubmit="checkForm"><br><br>
