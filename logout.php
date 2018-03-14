@@ -13,7 +13,7 @@
     or die("Error connecting to the MySQL server: " . mysqli_connect_error($connection));
     echo $username;
     echo "<br>Session logged in set.";
-    $sqlupdate ="UPDATE Administrators SET LoggedIn=0 WHERE Username='$username'";
+    $sqlupdate ="UPDATE 'Administrators' SET LoggedIn=0 WHERE Username='$username'";
     echo $sqlupdate;
     echo "<br>Updating database logged in.";
     mysqli_query($connection,$sqlupdate) or die(mysqli_error($connection)); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
