@@ -3,12 +3,14 @@
 
 <p> Checking connection... </p>
 <?php include 'connect.php';
+echo "Hello!";
 
+/*
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
 echo $username;
 echo $hashedpwd;
-/*
+
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
 
@@ -41,5 +43,6 @@ mysqli_close($db);
 	}*/
 ?>
 
+<p> I am here! </p>
 </body>
 </html>
