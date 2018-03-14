@@ -54,7 +54,7 @@ if ($connection){
         }else{
         	echo "Login failed. Sad day.";//php page says login failed
           echo $username;
-          echo $table;
+          echo $result;
           echo $_SESSION;
         	}
 
