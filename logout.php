@@ -11,9 +11,10 @@
     $username = $_SESSION['login_user'];
     echo $username;
     echo "<br>Session logged in set.";
-    $sqlupdate ="UPDATE $table SET LoggedIn=1 WHERE Username='$username'";
+    $sqlupdate ="UPDATE $table SET LoggedIn=0 WHERE Username='$username'";
+    echo $sqlupdate;
     echo "<br>Updating database logged in.";
-    mysqli_query($connection,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
+    mysqli_query($connection,$sqlupdate) or die(mysqli_error($connection)); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
     echo "<br>Session destroyed.";
     session_destroy();
 
