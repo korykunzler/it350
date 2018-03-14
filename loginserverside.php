@@ -35,7 +35,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
         echo $username;
         echo "<br>Pwd: ";
         echo $hashedpwd;
-        echo "<br>Result: ";
+        //echo "<br>Result: ";
         //echo $result;
         echo "DB: ";
         echo $db;
@@ -45,6 +45,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
         echo $count;
 
         if($count==1){
+          echo "Signing the user in..."
 	         session_start();
            $_SESSION['login_user']= $username;
            $_SESSION['loggedin'] = true;
