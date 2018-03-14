@@ -42,6 +42,7 @@ if ($connection){
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
+        echo "Count: " $count;
         if($count==1)
         {
 
@@ -54,13 +55,9 @@ if ($connection){
         }else{
         	echo "Login failed. Sad day. <br>";//php page says login failed
           echo $username;
-          //echo " :Username <br>"
           echo $result;
-          //echo " :Result <br>"
-          //echo $count;
-          //echo " <-Count <br>"
           echo $_SESSION;
-          //echo " :Session <br>"
+
         	}
 
 }
