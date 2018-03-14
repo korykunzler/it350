@@ -4,6 +4,8 @@
 <p> Checking connection... </p>
 <?php
 
+echo "Hello!";
+/*
 
 $connection = mysqli_connect('192.168.50.34/phpmyadmin', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
 or die("Error connecting to the MySQL server. TEST " + mysqli_connect_error($connection));
@@ -24,9 +26,9 @@ if(!$db){
   die("Database could not be found." . mysqli_error($connection));
 }
 //require('connect.php');
-echo "Hello!";
 
-/*
+
+
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
 echo $username;
