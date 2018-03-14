@@ -14,9 +14,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 	</head>
 	<body>
   	<h3>Admin Site</h3>
-    <button type="Puzzlesbutton">Add puzzles to the database</button><br><br>
-    <button type="PuzzlesDisplaybutton">Show all puzzles</button><br><br>
-  	<button type="Ordersbutton">Show unshipped orders</button><br><br>
+    <a href="addpuzzles.php"><button type="Puzzlesbutton">Add puzzles to the database</button><br><br></a>
+    <a href="showpuzzles.php"><button type="PuzzlesDisplaybutton">Show all puzzles</button><br><br></a>
+  	<a href="showorders.php"><button type="Ordersbutton">Show unshipped orders</button><br><br></a>
 
     <div id="unshippedorders"> </div>
     <div id="allpuzzles"> </div>
