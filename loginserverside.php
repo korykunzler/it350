@@ -36,7 +36,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
         echo "<br>Pwd: ";
         echo $hashedpwd;
         echo "<br>Result: ";
-        echo $result;
+        //echo $result;
         echo "DB: ";
         echo $db;
         echo "<br>SQL: ";
