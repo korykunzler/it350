@@ -4,10 +4,12 @@
 <p> Checking connection... </p>
 <?php
 
-echo "Hello!";
-echo $database;
-echo $connection;
-echo "Hi!";
+echo "<p>Hello!</p>";
+$username = $_POST['username'];
+$hashedpwd = sha1($_POST['pwd']);
+echo $username;
+echo $hashedpwd;
+echo "<p>Hi!</p>";
 
 /*
 $connection = mysqli_connect('192.168.50.34/phpmyadmin', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
