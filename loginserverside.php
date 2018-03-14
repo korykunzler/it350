@@ -61,8 +61,6 @@ if ($connection){
           echo $result;
 
           echo $_SESSION;
-=
-
         	}
 
 }
