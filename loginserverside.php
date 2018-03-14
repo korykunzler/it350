@@ -12,8 +12,8 @@ echo $hashedpwd;
 echo "<p>Hi!</p>";
 
 
-$connection = mysqli_connect('http://192.168.50.34', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
-or die("Error connecting to the MySQL server. TEST " . mysqli_connect_error($connection));
+$connection = mysqli_connect('localhost', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
+or die("Error connecting to the MySQL server: " . mysqli_connect_error($connection));
 
 
 $database = "it350";
