@@ -37,8 +37,16 @@
     <input type="submit" id="submit" value="Submit" onsubmit="checkForm"><br><br>
 
 		<?php
+		include_once 'connect.php';
+
+
+		$query = "SELECT * FROM Puzzles";
+	  //first pass just gets the column names
+	  print "<table> n";
+	  $result = $connection->query($query);
 		echo "Start while loop:";
-		 while($row = mysql_fetch_array($result)) { ?>
+		 while($row = mysql_fetch_array($result)) {
+?>
 
 		  <tr>
 		    <td style='width: 200px;'>
@@ -53,18 +61,7 @@
 
 		<?php } ?>
 
-		<?php
-		echo "Start if loop: ";
-		if (mysqli_num_rows($result) > 0) {
-		    // output data of each row
-		    //echo "fetch_assoc";
-		    $row = mysqli_fetch_assoc($result);
-		    var_dump($row);
-		} else {
-		    echo "0 results";
-		}
 
-		?>
 
   </form>
 
