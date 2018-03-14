@@ -42,8 +42,8 @@
 
 		$query = "SELECT * FROM Puzzles";
 	  //first pass just gets the column names
-	  print "<table> n";
-	  $result = $connection->query($query);
+	  //print "<table> n";
+	  $result = mysqli_query($connection,$query);
 		echo "Start while loop:";
 		 while($row = mysql_fetch_array($result)) {
 ?>
