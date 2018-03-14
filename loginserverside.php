@@ -3,14 +3,14 @@
 
 <p> Checking connection... </p>
 <?php include 'connect.php';
-
+/*
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
 
 if ($connection){
     if (isset($_POST['username']) && !empty($_POST['pwd']))
 	{
-    /*
+
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
@@ -26,14 +26,14 @@ if ($connection){
         }else{
         	echo "Login failed. Sad day.";//php page says login failed
         	}
-	}*/
+
 }
 else {
    print "Database NOT found, can't attempt to log in"; //This is to let them know that they can't access the DB
 }
 
 mysqli_close($db);
-
+	}*/
 ?>
 
 </body>
