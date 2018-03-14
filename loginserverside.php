@@ -42,7 +42,7 @@ if ($connection){
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
-        echo "Count: " $count;
+        echo $count;
         if($count==1)
         {
 
