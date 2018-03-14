@@ -4,20 +4,15 @@
 <p> Checking connection... </p>
 <?php
 
-#echo "<p>Hello!</p>";
-$username = $_POST['username'];
+$username = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
 $hashedpwd = sha1($_POST['pwd']);
-#echo "<p>Hi!</p>";
+$database = "it350"; //database I am connecting to
+$table = "Administrators"; //table I am connecting to
 
-
-$connection = mysqli_connect('localhost', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow
+$connection = mysqli_connect('localhost', 'admin', 'myverysecurepassword', $database) //test:Unsecure,Iknow //connects to the database or returns the error message.
 or die("Error connecting to the MySQL server: " . mysqli_connect_error($connection));
 
-
-$database = "it350";
-$table = "Administrators";
-
-if(!$connection) {
+if(!$connection) { //if for some reason i lose connection to the service, will return error message
   die ("Connection to server lost." . mysqli_error($connection));
 }
 
@@ -36,7 +31,7 @@ if ($connection){
         //$sql = "SELECT * FROM Administrators WHERE Username = 'test' AND Password = '4400c2ef10d4772936a0478f62809ed3d29db912'"; //This is working
         $result = mysqli_query($db, $sql); //START HERE. NEITHER RESULT NOR COUNT APPEAR TO BE GETTING ANYTHING BACK.  //JASON'S REFERENCE CODE APPEARS TO BE DOING ALMOST THE EXACT SAME THING. NOT SURE WHAT IS UP.
         $count = mysqli_num_rows($result); // returns number of rows
-        echo "DB: ";
+        echo "DB: "; //Echos are for debugging purposes only.
         echo $db;
         echo "<br>SQL: ";
         echo $sql;
@@ -54,7 +49,7 @@ if ($connection){
 
         else{
         	echo "<br><br>Login failed. Sad day. <br>";//php page says login failed
-          echo "Username: ";
+          echo "Username: "; //Echos are for debugging purposes only.
           echo $username;
           echo "<br>Pwd: ";
           echo $hashedpwd;
