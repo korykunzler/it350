@@ -45,7 +45,7 @@
 	  //print "<table> n";
 	  $result = mysqli_query($connection,$query);
 		echo "Start while loop:";
-		var_dump $result;
+		//var_dump $result;
 		 while($row = mysql_fetch_array($result)) {
 
 			 	echo "In my while loop.";
