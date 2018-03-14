@@ -4,8 +4,6 @@
 <p> Checking connection... </p>
 <?php
 
-$username = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
-$hashedpwd = sha1($_POST['pwd']);
 $database = "it350"; //database I am connecting to
 $table = "Administrators"; //table I am connecting to
 
@@ -16,21 +14,23 @@ if(!$connection) { //if for some reason i lose connection to the service, will r
   die ("Connection to server lost." . mysqli_error($connection));
 }
 
-$db = mysqli_select_db($connection, $database);
+$db = mysqli_select_db($connection, $database); //This chooses the database to work with
 
-if(!$db){
+if(!$db){ //if it can't find the database, it will return an error
   die("Database could not be found." . mysqli_error($connection));
 }
 
-if ($connection){
-    if (isset($_POST['username']) && !empty($_POST['pwd']))
+if ($connection){ //if there is a connection, and if the
+    if (isset($_POST['username']) & !empty($_POST['pwd']))
 	{
 
+    $username = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
+    $hashedpwd = sha1($_POST['pwd']);
         //
-        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
-        //$sql = "SELECT * FROM Administrators WHERE Username = 'test' AND Password = '4400c2ef10d4772936a0478f62809ed3d29db912'"; //This is working
+        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'"; //This is working and pulls the correct information in PHPMyAdmin
         $result = mysqli_query($db, $sql); //START HERE. NEITHER RESULT NOR COUNT APPEAR TO BE GETTING ANYTHING BACK.  //JASON'S REFERENCE CODE APPEARS TO BE DOING ALMOST THE EXACT SAME THING. NOT SURE WHAT IS UP.
         $count = mysqli_num_rows($result); // returns number of rows
+
         echo "DB: "; //Echos are for debugging purposes only.
         echo $db;
         echo "<br>SQL: ";
