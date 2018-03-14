@@ -52,13 +52,13 @@ if ($connection){
             mysqli_query($db,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
 		header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }else{
-        	echo "Login failed. Sad day.";//php page says login failed
+        	echo "Login failed. Sad day. <br>";//php page says login failed
           echo $username;
           echo " <-Username <br>"
           echo $result;
           echo " <-Result <br>"
-          echo $count;
-          echo " <-Count <br>"
+          //echo $count;
+          //echo " <-Count <br>"
           echo $_SESSION;
           echo " <-Session <br>"
         	}
