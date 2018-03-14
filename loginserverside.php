@@ -4,7 +4,7 @@
 <p> Checking connection... </p>
 <?php
 
-include_once() "connect.php";
+include_once() 'connect.php';
 
 if ($connection){ //if there is a connection, and if the username is set and the password is not empty
     if (isset($_POST['username']) & !empty($_POST['pwd']))
