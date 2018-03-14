@@ -3,6 +3,11 @@
 
 <p> Checking connection... </p>
 <?php include 'connect.php';
+
+$username = $_POST['username'];
+$hashedpwd = sha1($_POST['pwd']);
+echo $username;
+echo $hashedpwd;
 /*
 $username = $_POST['username'];
 $hashedpwd = sha1($_POST['pwd']);
