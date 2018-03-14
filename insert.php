@@ -18,14 +18,24 @@ $sql = insert into Puzzles values($pname,$quantity,$numberofpieces,$size,$diffic
 $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
 
-<?php while($row = mysql_fetch_array($member)) { ?>
+<?php
+echo "Start while loop:";
+ while($row = mysql_fetch_array($result)) { ?>
   <tr>
-    <td style='width: 200px;'><?php echo $row['username']; ?></td><td style='width: 600px;'><?php echo $row['fname']; ?></td><td><?php echo $row['lname']; ?></td><td><?php echo $row['jdate']; ?></td>
+    <td style='width: 200px;'>
+    <?php echo $row['pname']; ?>
+    </td><td style='width: 600px;'>
+    <?php echo $row['quantity']; ?></td><td>
+    <?php echo $row['numberofpieces']; ?></td><td>
+    <?php echo $row['size']; ?></td><td>
+    <?php echo $row['difficulty']; ?></td><td>
+    <?php echo $row['theme']; ?></td>
   </tr>
 
 <?php } ?>
 
-
+<?php
+echo "Start if loop: ";
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     //echo "fetch_assoc";
@@ -34,6 +44,9 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
+
+?>
+
 
 </body>
 </html>
