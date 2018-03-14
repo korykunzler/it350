@@ -4,7 +4,7 @@
 <p> Checking connection... </p>
 <?php
 
-//include 'connect.php';
+include('connect.php)';
 echo "Hello!";
 
 /*
