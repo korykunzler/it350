@@ -28,10 +28,16 @@ if ($connection){ //if there is a connection, and if the username is set and the
     $hashedpwd = sha1($_POST['pwd']);
         //
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'"; //This is working and pulls the correct information in PHPMyAdmin
-        $result = mysqli_query($connection, $sql); //START HERE. NEITHER RESULT NOR COUNT APPEAR TO BE GETTING ANYTHING BACK.  //JASON'S REFERENCE CODE APPEARS TO BE DOING ALMOST THE EXACT SAME THING. NOT SURE WHAT IS UP.
+        $result = mysqli_query($connection, $sql); //START HERE. $db or $connection? NEITHER RESULT NOR COUNT APPEAR TO BE GETTING ANYTHING BACK.  //JASON'S REFERENCE CODE APPEARS TO BE DOING ALMOST THE EXACT SAME THING. NOT SURE WHAT IS UP.
         $count = mysqli_num_rows($result); // returns number of rows
 
-        echo "DB: "; //Echos are for debugging purposes only.
+        echo "Username: "; //Echos are for debugging purposes only.
+        echo $username;
+        echo "<br>Pwd: ";
+        echo $hashedpwd;
+        echo "<br>Result: ";
+        echo $result;
+        echo "DB: ";
         echo $db;
         echo "<br>SQL: ";
         echo $sql;
@@ -39,7 +45,6 @@ if ($connection){ //if there is a connection, and if the username is set and the
         echo $count;
 
         if($count==1){
-          echo "Made it in the count test <br>"
 	         session_start();
            $_SESSION['login_user']= $username;
            $_SESSION['loggedin'] = true;
@@ -50,13 +55,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
 
         else{
         	echo "<br><br>Login failed. Sad day. <br>";//php page says login failed
-          echo "Username: "; //Echos are for debugging purposes only.
-          echo $username;
-          echo "<br>Pwd: ";
-          echo $hashedpwd;
-          echo "<br>Result: ";
-          echo $result;
-          echo "<br>Session: ";
+          echo "<br>Session: ";//Echos are for debugging purposes only.
           echo $_SESSION;
         	}
 
