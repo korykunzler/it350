@@ -2,7 +2,9 @@
 <body>
 
 <p> Checking connection... </p>
-<?php include 'connect.php';
+<?php
+
+//include 'connect.php';
 echo "Hello!";
 
 /*
