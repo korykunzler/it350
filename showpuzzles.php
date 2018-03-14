@@ -18,5 +18,7 @@
 	<h3>Show puzzles</h3>
 	<p> This is going to be my show puzzles site. I want it to be able to show orders for employees to see what they have.</P>
 
+    <div id="allpuzzles"> </div>
+
 	</body>
 </html>
