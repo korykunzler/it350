@@ -51,7 +51,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
            $_SESSION['loggedin'] = true;
            $sqlupdate ="UPDATE $table SET LoggedIn=1 WHERE Username='$username'";
            mysqli_query($db,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
-           echo "Finished signing in. Redirecting..."
+           echo "Finished signing in. Redirecting...";
            header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }
 
