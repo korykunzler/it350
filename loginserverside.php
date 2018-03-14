@@ -1,6 +1,7 @@
 <html>
 <body>
 
+<p> Checking connection... </p>
 <?php include 'connect.php';
 
 $username = $_POST['username'];
