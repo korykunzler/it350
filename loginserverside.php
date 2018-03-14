@@ -42,6 +42,7 @@ if ($connection){
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
+        echo "<p>Count: </p>";
         echo $count;
         if($count==1)
         {
@@ -54,9 +55,13 @@ if ($connection){
 		header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }else{
         	echo "Login failed. Sad day. <br>";//php page says login failed
+          echo "<p>Username: </p>";
           echo $username;
+          echo "<p>Result: </p>";
           echo $result;
+          echo "<p>Session: </p>";
           echo $_SESSION;
+=
 
         	}
 
