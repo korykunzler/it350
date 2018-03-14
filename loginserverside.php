@@ -55,11 +55,11 @@ if ($connection){
 		header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }else{
         	echo "Login failed. Sad day. <br>";//php page says login failed
-          echo "<p>Username: </p>";
+          //echo "<p>Username: </p>";
           echo $username;
-          echo "<p>Result: </p>";
+          //echo "<p>Result: </p>";
           echo $result;
-          echo "<p>Session: </p>";
+          //echo "<p>Session: </p>";
           echo $_SESSION;
 =
 
