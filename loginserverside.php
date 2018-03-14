@@ -31,7 +31,7 @@ $db = mysqli_select_db($connection, $database);
 if(!$db){
   die("Database could not be found." . mysqli_error($connection));
 }
-//require('connect.php');
+
 
 
 
@@ -42,7 +42,7 @@ if ($connection){
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         $result = mysqli_query($db, $sql);
         $count = mysqli_num_rows($result); // returns number of rows
-        //echo "<p>Count </p>";
+
         echo $count;
         if($count==1)
         {
@@ -54,12 +54,12 @@ if ($connection){
             mysqli_query($db,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
 		header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
         }else{
-        	echo "Login failed. Sad day. <br>";//php page says login failed
-          //echo "<p>Username: </p>";
+        	echo "Login failed. Sad day.";//php page says login failed
+
           echo $username;
-          //echo "<p>Result: </p>";
+
           echo $result;
-          //echo "<p>Session: </p>";
+
           echo $_SESSION;
 =
 
