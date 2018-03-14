@@ -21,7 +21,7 @@ $table = "Administrators";
 
 echo "<p>Test</p>";
 
-/*
+
 if(!$connection) {
   die ("Connection to server lost." . mysqli_error($connection));
 }
@@ -34,14 +34,6 @@ if(!$db){
 //require('connect.php');
 
 
-
-$username = $_POST['username'];
-$hashedpwd = sha1($_POST['pwd']);
-echo $username;
-echo $hashedpwd;
-
-$username = $_POST['username'];
-$hashedpwd = sha1($_POST['pwd']);
 
 if ($connection){
     if (isset($_POST['username']) && !empty($_POST['pwd']))
@@ -69,7 +61,7 @@ else {
 }
 
 mysqli_close($db);
-	}*/
+	}
 ?>
 
 <p> I am here! </p>
