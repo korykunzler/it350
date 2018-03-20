@@ -115,7 +115,7 @@ if (!$query) {
 		while ($row = mysqli_fetch_array($query))
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
-			echo "test"/*'<tr>
+			echo $amount /*'<tr>
 					<td>'.$pname.'</td>
 					<td>'.$quantity.'</td>
 					<td>'.$numberofpieces.'</td>
