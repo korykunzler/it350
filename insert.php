@@ -20,28 +20,10 @@ $theme = $_POST['theme'];
 $sql = "insert into Puzzles values(pname = '$pname',quantity = '$quantity',numberofpieces = '$numberofpieces',size = '$size',difficulty = '$difficulty',theme = '$theme')";
 $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
+header("location:addpuzzles.php");
 
 ?>
 
 <p>"Finished! You should never see this."</p>
 </body>
 </html>
-
-
-<!--
-
-
-
-
-
-
-
-echo "Redirecting...";
-header("location:addpuzzles.php");
-
-
-
-
-
-
--->
