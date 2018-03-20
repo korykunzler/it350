@@ -121,7 +121,8 @@ if (!$query) {
 					<td>'.$row['numberofpieces'].'</td>
 					<td>'.$row['size']. '</td
 					<td>'.$row['difficulty']. '</td>
-					<td>'.$row['theme'].'</td>
+					<td>'.$row['theme']. '</td>
+					<td> </td>
 				</tr>';
 			$total += $row['amount'];
 			$no++;
