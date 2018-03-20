@@ -8,6 +8,9 @@
 <?php
 echo "Starting this statement.";
 
+include_once 'connect.php';
+
+
 ?>
 
 <p>"Finished! You should never see this."</p>
@@ -18,7 +21,6 @@ echo "Starting this statement.";
 <!--
 
 
-include_once 'connect.php';
 
 $pname = $_POST['pname'];
 $quantity = $_POST['quantity'];
