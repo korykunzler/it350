@@ -110,7 +110,6 @@ if (!$query) {
 		</thead>
 		<tbody>
 		<?php
-		$no 	= 1;
 		$total 	= 0;
 		while ($row = mysqli_fetch_array($query))
 		{
@@ -125,19 +124,8 @@ if (!$query) {
 					<td> </td>
 				</tr>';
 			$total += $row['amount'];
-			$no++;
 		}?>
 		</tbody>
-
-
-
-
-		<tfoot>
-			<tr>
-				<!--<th colspan="4">TOTAL</th>
-				<th><?=number_format($total)?></th>-->
-			</tr>
-		</tfoot>
 	</table>
 </body>
 </html>

@@ -34,39 +34,9 @@
     <p>Theme:<br>
   	<input type="text" name="theme" id="theme" required><br><br></p>
 
-    <input type="submit" id="submit" value="Submit" onsubmit="checkForm"><br><br>
+    <input type="submit" id="submit" value="Submit" onsubmit="showpuzzles.php"><br><br>
 
-		<?php
-		include_once 'connect.php';
-
-
-		$query = "SELECT * FROM Puzzles";
-	  //first pass just gets the column names
-	  //print "<table> n";
-	  $result = mysqli_query($connection,$query);
-		echo "Start while loop:";
-		//var_dump $result;
-		 while($row = mysql_fetch_array($result)) {
-
-			 	echo "In my while loop.";
-?>
-
-		  <tr>
-		    <td style='width: 200px;'>
-		    <?php echo $row['pname']; ?>
-		    </td><td style='width: 600px;'>
-		    <?php echo $row['quantity']; ?></td><td>
-		    <?php echo $row['numberofpieces']; ?></td><td>
-		    <?php echo $row['size']; ?></td><td>
-		    <?php echo $row['difficulty']; ?></td><td>
-		    <?php echo $row['theme']; ?></td>
-		  </tr>
-
-		<?php } ?>
-
-
-
-  </form>
+	  </form>
 
 	</body>
 </html>
