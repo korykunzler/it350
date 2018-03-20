@@ -7,6 +7,17 @@
 
 <?php
 echo "Starting this statement.";
+
+?>
+
+<p>"Finished! You should never see this."</p>
+</body>
+</html>
+
+
+<!--
+
+
 include_once 'connect.php';
 
 $pname = $_POST['pname'];
@@ -22,8 +33,10 @@ $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
 echo "Redirecting...";
 header("location:addpuzzles.php");
-?>
 
-<p>"Finished! You should never see this."</p>
-</body>
-</html>
+
+
+
+
+
+-->
