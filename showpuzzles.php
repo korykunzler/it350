@@ -97,7 +97,6 @@ if (!$query) {
 <body>
 	<h1>Puzzles</h1>
 	<table class="data-table">
-		<caption class="title">Puzzles DB</caption>
 		<thead>
 			<tr>
 				<th>pname</th>
@@ -106,6 +105,7 @@ if (!$query) {
 				<th>size</th>
 				<th>difficulty</th>
 				<th>theme</th>
+				<th>Extra info</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -121,7 +121,7 @@ if (!$query) {
 					<td>'.$row['size']. '</td
 					<td>'.$row['difficulty']. '</td>
 					<td>'.$row['theme']. '</td>
-					<td> </td>
+					<td>'test' </td>
 				</tr>';
 			$total += $row['amount'];
 		}?>
