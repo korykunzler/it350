@@ -24,7 +24,7 @@ $theme = $_POST['theme'];
 echo $theme;
 
 echo "Finished echos"
-$sql = "INSERT INTO Puzzles (pname, quantity, numberofpieces, size, difficulty, theme) values('$pname','$quantity','$numberofpieces','$size','$difficulty','$theme')";
+//$sql = "INSERT INTO Puzzles (pname, quantity, numberofpieces, size, difficulty, theme) values('$pname','$quantity','$numberofpieces','$size','$difficulty','$theme')";
 $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
 //header("location:showpuzzles.php");
