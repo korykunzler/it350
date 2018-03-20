@@ -105,7 +105,6 @@ if (!$query) {
 				<th>numberofpieces</th>
 				<th>size</th>
 				<th>difficulty</th>
-				<th>theme</th>
 			</tr>
 		</thead>
 		<tbody>
