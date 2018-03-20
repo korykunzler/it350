@@ -109,12 +109,11 @@
 					<caption class="title">Orders DB</caption>
 					<thead>
 						<tr>
-							<th>pname</th>
-							<th>quantity</th>
-							<th>numberofpieces</th>
-							<th>size</th>
-							<th>difficulty</th>
-							<th>theme</th>
+							<th>OrderID</th>
+							<th>CustomerID</th>
+							<th>PuzzleName</th>
+							<th>Shipped</th>
+
 						</tr>
 					</thead>
 					<tbody>
