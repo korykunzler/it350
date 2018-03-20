@@ -1,7 +1,7 @@
 <html>
 <body>
 
-
+<p>Inserting puzzles...</p>
 <?php
 
 include_once 'connect.php';
@@ -20,6 +20,6 @@ $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 header("location:addpuzzles.php");
 ?>
 
-
+<p>Finished!</p>
 </body>
 </html>
