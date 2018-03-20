@@ -18,6 +18,7 @@ $difficulty = $_POST['difficulty'];
 $theme = $_POST['theme'];
 
 $sql = "insert into Puzzles values(pname = '$pname',quantity = '$quantity',numberofpieces = '$numberofpieces',size = '$size',difficulty = '$difficulty',theme = '$theme')";
+$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
 
 ?>
@@ -34,7 +35,6 @@ $sql = "insert into Puzzles values(pname = '$pname',quantity = '$quantity',numbe
 
 
 
-$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
 echo "Redirecting...";
 header("location:addpuzzles.php");
