@@ -121,7 +121,7 @@ if (!$query) {
 					<td>'.$row['size']. '</td
 					<td>'.$row['difficulty']. '</td>
 					<td>'.$row['theme']. '</td>
-					<td>'test' </td>
+					<td>'.$row["test"].' </td>
 				</tr>';
 			$total += $row['amount'];
 		}?>
