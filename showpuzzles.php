@@ -115,14 +115,14 @@ if (!$query) {
 		while ($row = mysqli_fetch_array($query))
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
-			echo '<tr>
+			echo "test"/*'<tr>
 					<td>'.$pname.'</td>
-					<td>'.$quantity['name'].'</td>
-					<td>'.$numberofpieces['item'].'</td>
+					<td>'.$quantity.'</td>
+					<td>'.$numberofpieces.'</td>
 					<td>'.$size. '</td
 					<td>'.$difficulty. '</td>
-					<td>'.$thee.'</td>
-				</tr>';
+					<td>'.$theme.'</td>
+				</tr>'*/;
 			$total += $row['amount'];
 			$no++;
 		}?>
