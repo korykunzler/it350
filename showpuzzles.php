@@ -116,12 +116,12 @@ if (!$query) {
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
 			echo '<tr>
-					<td>'.$pname['name'].'</td>
-					<td>'.$quantity['quantity'].'</td>
-					<td>'.$numberofpieces['numberofpieces'].'</td>
-					<td>'.$size['size']. '</td
-					<td>'.$difficulty['difficulty']. '</td>
-					<td>'.$theme['theme'].'</td>
+					<td>'.$row['pname'].'</td>
+					<td>'.$row['quantity'].'</td>
+					<td>'.$row['numberofpieces'].'</td>
+					<td>'.$row['size']. '</td
+					<td>'.$row['difficulty']. '</td>
+					<td>'.$row['theme'].'</td>
 				</tr>';
 			$total += $row['amount'];
 			$no++;
