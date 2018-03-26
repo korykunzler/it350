@@ -10,29 +10,29 @@ if ($connection){ //if there is a connection, and if the username is set and the
     if (isset($_POST['username']) & !empty($_POST['pwd']))
 	{
 
-    $cusername = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
-    $chashedpwd = sha1($_POST['pwd']);
-    $table = "Customers";
+    $username = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
+    $hashedpwd = sha1($_POST['pwd']);
+    $table = 'Customers';
     echo "Username: "; //Echos are for debugging purposes only.
-    echo $cusername;
+    echo $username;
     echo "<br>Pwd: ";
-    echo $chashedpwd;
+    echo $hashedpwd;
     echo "<br>Table: "; //Echos are for debugging purposes only.
     echo $table;
     echo "<br>";
 
         //
-        $sql = "SELECT * FROM $table WHERE Username = '$cusername' AND Password = '$chashedpwd'";
+        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         echo "After sql";
-        echo $cusername;
+        echo $username;
         $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
         echo "After result";
         $count = mysqli_num_rows($result); // returns number of rows
 
         echo "Username: "; //Echos are for debugging purposes only.
-        echo $cusername;
+        echo $username;
         echo "<br>Pwd: ";
-        echo $chashedpwd;
+        echo $hashedpwd;
         echo "DB: ";
         echo $db;
         echo "<br>SQL: ";
@@ -44,11 +44,11 @@ if ($connection){ //if there is a connection, and if the username is set and the
           echo "<br>Signing the user in...";
 	         session_start();
            echo "<br>Session started.";
-           $_SESSION['login_user']= $cusername;
+           $_SESSION['login_user']= $username;
            echo "<br>Session username set.";
            $_SESSION['loggedin'] = true;
            echo "<br>Session logged in set.";
-           $sqlupdate ="UPDATE $table SET LoggedIn=1 WHERE Username='$cusername'";
+           $sqlupdate ="UPDATE $table SET LoggedIn=1 WHERE Username='$username'";
            echo "<br>Updating database logged in.";
            mysqli_query($connection,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
            echo "<br>Finished signing in. Redirecting...";

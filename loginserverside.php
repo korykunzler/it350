@@ -13,7 +13,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
     $username = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
     $hashedpwd = sha1($_POST['pwd']);
         //
-        $sql = "SELECT * FROM $table WHERE 'Username' = '$username' AND 'Password' = '$hashedpwd'";
+        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
         $count = mysqli_num_rows($result); // returns number of rows
 
