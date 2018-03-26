@@ -2,14 +2,23 @@
 
 <html>
 	<head>
-		<title>My Admin Site</title>
+		<title>My Customer Site</title>
 	</head>
 	<body>
-	<h3>Admin Site</h3>
-	<p> This is going to be my admin site. I want it to be able to show orders for employees to ship them.</P>
-	<p> I also want this to be able to add puzzles to the puzzle database </p>
-
-	<a href="login.php"><button type="button">Login here!</button></a>
+	<h3>Customer Site</h3>
+	<a href="login.php"><button type="button">Admin login here!</button></a><br><br>
+	<a href="clogin.php"><button type="button">Customer Login here!</button></a>
 
 	</body>
 </html>
+
+
+<!-- NOTES:
+
+MySQL Stored PROCEDURE
+DELIMITER $$
+CREATE PROCEDURE updatetotal() UPDATE StoredProcedure SET balance = (balance * 1.04) $$
+
+
+
+-->
