@@ -1,4 +1,4 @@
-<form  id="loginform" action="cloginserverside.php" method="post"><br> <!--This will need to be modified-->
+<form  id="cloginform" action="cloginserverside.php" method="post"><br> <!--This will need to be modified-->
 
 Please log in to view the Customer page.<br><br>
 

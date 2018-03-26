@@ -13,6 +13,13 @@ if ($connection){ //if there is a connection, and if the username is set and the
     $username = $_POST['username']; //Receives the username/pwd from the post and saves them to variables
     $hashedpwd = sha1($_POST['pwd']);
     $table = "Customers";
+    echo "Username: "; //Echos are for debugging purposes only.
+    echo $username;
+    echo "<br>Pwd: ";
+    echo $hashedpwd;
+    echo "Table: "; //Echos are for debugging purposes only.
+    echo $table;
+
         //
         $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'"; //This is working and pulls the correct information in PHPMyAdmin
         $result = mysqli_query($connection, $sql) or die(mysqli_error($connection)); //START HERE. $db or $connection? NEITHER RESULT NOR COUNT APPEAR TO BE GETTING ANYTHING BACK.  //JASON'S REFERENCE CODE APPEARS TO BE DOING ALMOST THE EXACT SAME THING. NOT SURE WHAT IS UP.
@@ -22,8 +29,6 @@ if ($connection){ //if there is a connection, and if the username is set and the
         echo $username;
         echo "<br>Pwd: ";
         echo $hashedpwd;
-        //echo "<br>Result: ";
-        //echo $result;
         echo "DB: ";
         echo $db;
         echo "<br>SQL: ";
