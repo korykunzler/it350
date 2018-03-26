@@ -2,10 +2,11 @@
 
 <html>
 	<head>
-		<title>My Customer Site</title>
+		<title>Piece by Piece</title>
 	</head>
 	<body>
-	<h3>Customer Site</h3>
+	<h3>Piece by Piece</h3>
+	<p> Please login to the appropriate site: </p>
 	<a href="login.php"><button type="button">Admin login here!</button></a><br><br>
 	<a href="clogin.php"><button type="button">Customer Login here!</button></a>
 
