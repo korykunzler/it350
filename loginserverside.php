@@ -50,6 +50,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
         	echo "<br><br>Login failed. Sad day. <br>";//php page says login failed
           echo "<br>Session: ";//Echos are for debugging purposes only.
           echo $_SESSION;
+          //header("location:login.php");
         	}
 
 }
@@ -61,6 +62,5 @@ mysqli_close($db);
 	}
 ?>
 
-<p> I am here! </p>
 </body>
 </html>

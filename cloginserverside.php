@@ -17,7 +17,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
     echo $username;
     echo "<br>Pwd: ";
     echo $hashedpwd;
-    echo "Table: "; //Echos are for debugging purposes only.
+    echo "<br>Table: "; //Echos are for debugging purposes only.
     echo $table;
 
         //
