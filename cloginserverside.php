@@ -43,7 +43,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
            echo "<br>Updating database logged in.";
            mysqli_query($connection,$sqlupdate) or die(mysqli_error()); //https://coolestguidesontheplanet.com/how-to-connect-to-a-mysql-database-with-php/
            echo "<br>Finished signing in. Redirecting...";
-           header("location:loggedin.php"); // http://www.cyberciti.biz/faq/php-redirect/
+           header("location:mainpage.php"); // http://www.cyberciti.biz/faq/php-redirect/
            exit();
         }
 
