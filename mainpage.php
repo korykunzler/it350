@@ -12,7 +12,7 @@ if (!$query) {
 ?>
 <html>
 <head>
-	<title>Show Puzzles</title>
+	<title>Piece by Piece Inventory</title>
 	<style type="text/css">
 		body {
 			font-size: 15px;
@@ -121,8 +121,17 @@ if (!$query) {
 					<td>'.$row['difficulty']. '</td>
 					<td>'.$row['theme']. '</td>
 				</tr>';
-			$total += $row['amount'];
+			//$total += $row['amount'];
 		}?>
+
+		<!--
+NOTES: https://phppot.com/php/simple-php-shopping-cart/
+This link should give most of the code for the shopping cart.
+
+
+	 -->
+
+		<p> Our website is awesome! Check out our reviews here --> 	<a href="reviewpage.php"><button type="button">Review Page</button></a></p>
 		</tbody>
 	</table>
 </body>
