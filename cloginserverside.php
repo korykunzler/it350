@@ -22,7 +22,7 @@ if ($connection){ //if there is a connection, and if the username is set and the
     echo "<br>";
 
         //
-        $sql = "SELECT * FROM $table WHERE Username = '''$username''' AND Password = '$hashedpwd'";
+        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
         echo $sql;
         echo "<br>After sql <br>";
         echo $username;
