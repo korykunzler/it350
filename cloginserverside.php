@@ -22,9 +22,11 @@ if ($connection){ //if there is a connection, and if the username is set and the
     echo "<br>";
 
         //
-        $sql = "SELECT * FROM $table WHERE Username = '$username' AND Password = '$hashedpwd'";
-        echo "After sql";
+        $sql = "SELECT * FROM $table WHERE Username = '''$username''' AND Password = '$hashedpwd'";
+        echo $sql;
+        echo "<br>After sql <br>";
         echo $username;
+        echo "<br>";
         $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
         echo "After result";
         $count = mysqli_num_rows($result); // returns number of rows
