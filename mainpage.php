@@ -112,7 +112,7 @@ if (!$query) {
 		$total 	= 0;
 		while ($row = mysqli_fetch_array($query))
 		{
-			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
+			//$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
 			echo '<tr>
 					<td>'.$row['pname'].'</td>
 					<td>'.$row['quantity'].'</td>
