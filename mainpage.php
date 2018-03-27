@@ -121,7 +121,6 @@ if (!$query) {
 					<td>'.$row['difficulty']. '</td>
 					<td>'.$row['theme']. '</td>
 				</tr>';
-				sleep(2);
 			//$total += $row['amount'];
 		}?>
 
