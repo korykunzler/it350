@@ -117,7 +117,7 @@ if (!$query) {
 					<td>'.$row['pname'].'</td>
 					<td>'.$row['quantity'].'</td>
 					<td>'.$row['numberofpieces'].'</td>
-					<td>'.$row['size']. '</td
+					<td>'.$row['size']. '</td>
 					<td>'.$row['difficulty']. '</td>
 					<td>'.$row['theme']. '</td>
 				</tr>';
