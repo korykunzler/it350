@@ -22,8 +22,24 @@
 
 </form><br><br>
 
+<!--
+Need to follow one of these to set up the HTML to call the Python to access the database.
 
-db.ratingsdb.find() --> I currently have two reviews in there with _id, username, and rating.
+https://stackoverflow.com/questions/1697484/a-button-to-start-php-script-how
+https://www.codeproject.com/Questions/780440/calling-a-function-of-php-using-html-button
+https://www.quora.com/How-do-I-create-a-PHP-button-to-run-a-script-on-a-click
+
+
+-->
+
+<?php $print1star = passthru("python 1star.py"); ?>
+<?php $print2star = passthru("python 2star.py"); ?>
+<?php $print3star = passthru("python 3star.py"); ?>
+<?php $print4star = passthru("python 4star.py"); ?>
+<?php $print5star = passthru("python 5star.py"); ?>
+<?php $printall = passthru("python printall.py"); ?>
+
+
 
 </body>
 </html>
