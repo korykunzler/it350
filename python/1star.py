@@ -1,12 +1,13 @@
+print("**Python onestar**")
 from pymongo import MongoClient
 client = MongoClient('localhost', 27017)
 db = ratingsdb
 #collection = ratingsdb
 
 
-import pprint
+
 onestar = db.ratingsdb.find({'rating': '1'})
-pprint(onestar)
+print(onestar)
 
 
 #http://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient
