@@ -7,6 +7,9 @@ print("here 2 <br>")
 print("here three <br>")
 #collection = ratingsdb
 
+db.insert({'username':'Joe Johnny', 'rating':'4'})
+print("inserted?")
+
 print(db.ratingsdb.find())
 print("I am here now<br>")
 for onestar in db.ratingsdb.find({'rating': '1'}):
