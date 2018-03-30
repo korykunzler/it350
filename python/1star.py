@@ -3,7 +3,7 @@ from pymongo import MongoClient
 print("here one <br>")
 client = MongoClient('localhost', 27017)
 print("here 2 <br>")
-db = ratingsdb
+#db = ratingsdb
 print("here three <br>")
 #collection = ratingsdb
 
