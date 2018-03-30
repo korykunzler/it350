@@ -8,7 +8,7 @@ print("here three <br>")
 #collection = ratingsdb
 
 for onestar in db.ratingsdb.find({'rating': '1'}):
-    print onestar['username, rating']
+    print onestar['username', 'rating']
 
 #onestar = "db.ratingsdb.find({'rating': '1'})"
 print("<br>How about now?<br>")
