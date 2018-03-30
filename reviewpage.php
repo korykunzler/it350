@@ -22,34 +22,40 @@
 
 </form><br><br>
 
-<button onclick="print1star()">Show one star ratings</button>
-<button onclick="print2star()">Show two star ratings</button>
-<button onclick="print3star()">Show three star ratings</button>
-<button onclick="print4star()">Show four star ratings</button>
-<button onclick="print5star()">Show five star ratings</button>
-<button onclick="printall()">Show all ratings</button>
+<button onclick="print1star()">Show one star ratings</button><br>
+<button onclick="print2star()">Show two star ratings</button><br>
+<button onclick="print3star()">Show three star ratings</button><br>
+<button onclick="print4star()">Show four star ratings</button><br>
+<button onclick="print5star()">Show five star ratings</button><br>
+<button onclick="printall()">Show all ratings</button><br>
 
 <?php function print1star() {
+	echo "print1star";
 	 passthru("python 1star.py");
 }
 
 function print2star() {
+	echo "print2star";
 	 passthru("python 2star.py");
 }
 
 function print3star() {
+	echo "print3star";
 	 passthru("python 3star.py");
 }
 
 function print4star() {
+	echo "print4star";
 	 passthru("python 4star.py");
 }
 
 function print5star() {
+	echo "print5star";
 	 passthru("python 5star.py");
 }
 
 function printall() {
+	echo "printall";
 	 passthru("python printall.py");
 } ?>
 
