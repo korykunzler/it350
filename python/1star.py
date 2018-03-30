@@ -10,6 +10,7 @@ print("here three <br>")
 
 
 onestar = db.ratingsdb.find({'rating': '1'})
+
 print(onestar)
 
 
