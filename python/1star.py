@@ -10,8 +10,8 @@ print("here three <br>")
 
 
 for onestar in db.ratingsdb.find({'rating': '1'})
-    print(onestar)
-    print("<br>How about now?<br>")
+print("<br>How about now?<br>")
+print(onestar)
 print("<br>End of python <br>")
 
 #http://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient
