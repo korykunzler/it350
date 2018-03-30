@@ -7,12 +7,13 @@ print("here 2 <br>")
 print("here three <br>")
 #collection = ratingsdb
 
+for onestar in db.ratingsdb.find({'rating': '1'}):
+    print onestar['username, rating']
 
-
-for onestar in db.ratingsdb.find({'rating': '1'})
+#onestar = "db.ratingsdb.find({'rating': '1'})"
 print("<br>How about now?<br>")
-print(onestar)
-print("<br>End of python <br>")
+#print(onestar)
+print("<br> End of python <br>")
 
 #http://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient
 #https://stackoverflow.com/questions/19781768/executing-python-script-with-php-variables
