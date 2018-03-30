@@ -22,12 +22,12 @@
 
 </form><br><br>
 
-<a href="1star.py">Show one star ratings</a><br><br>
-<a href="2star.py">Show two star ratings</a><br><br>
-<a href ="3star.py">Show three star ratings</a><br><br>
-<a href ="4star.py">Show four star ratings</a><br><br>
-<a href ="5star.py">Show five star ratings</a><br><br>
-<a href ="all.py">Show all ratings</a><br><br>
+<a href="python/1star.py">Show one star ratings</a><br><br>
+<a href="python/2star.py">Show two star ratings</a><br><br>
+<a href ="python/3star.py">Show three star ratings</a><br><br>
+<a href ="python/4star.py">Show four star ratings</a><br><br>
+<a href ="python/5star.py">Show five star ratings</a><br><br>
+<a href ="python/all.py">Show all ratings</a><br><br>
 
 
 
