@@ -30,7 +30,7 @@
 <button onclick="printall()">Show all ratings</button><br><br>
 
 
-<input type = “button” id="b1" value="One star ratings">
+<input type = "button" id="b1" value="One star ratings">
 
 <script>
 
