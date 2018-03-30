@@ -30,36 +30,27 @@
 <button onclick="printall()">Show all ratings</button><br><br>
 
 
-<input type = “button” id=”b1″ value=”1″>
+<input type = “button” id="b1" value="One star ratings">
 
 <script>
 
 $(document).ready(function(){
+	$("#b1").click(function(){
+		$.ajax({
+		method: "GET",
+		url: "python/print1star();",
+		data: {"place" : value},
+		dataType: "button",
+			success: function(result){
+			var data=JSON.parse(result);
+			console.log(result);
 
-$("#b1").click(function(){
+			}
 
-$.ajax({
+		});
 
-method: "GET",
-
-url: "python/print1star();",
-
-data: {"place" : value},
-
-dataType: "text",
-
-success: function(result){
-
-var data=JSON.parse(result);
-
-console.log(result);
-
+	});
 }
-
-});
-
-});
-
 </script>
 
 
