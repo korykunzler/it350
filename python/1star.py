@@ -7,7 +7,10 @@ print("here 2 <br>")
 print("here three <br>")
 #collection = ratingsdb
 
+print(db.ratingsdb.find())
+print("I am here now<br>")
 for onestar in db.ratingsdb.find({'rating': '1'}):
+    print("Test")
     print onestar['username', 'rating']
 
 #onestar = "db.ratingsdb.find({'rating': '1'})"
