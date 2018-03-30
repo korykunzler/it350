@@ -22,12 +22,47 @@
 
 </form><br><br>
 
-<button onclick="print1star()">Show one star ratings</button><br>
-<button onclick="print2star()">Show two star ratings</button><br>
-<button onclick="print3star()">Show three star ratings</button><br>
-<button onclick="print4star()">Show four star ratings</button><br>
-<button onclick="print5star()">Show five star ratings</button><br>
-<button onclick="printall()">Show all ratings</button><br>
+<button onclick="print1star()">Show one star ratings</button><br><br>
+<button onclick="print2star()">Show two star ratings</button><br><br>
+<button onclick="print3star()">Show three star ratings</button><br><br>
+<button onclick="print4star()">Show four star ratings</button><br><br>
+<button onclick="print5star()">Show five star ratings</button><br><br>
+<button onclick="printall()">Show all ratings</button><br><br>
+
+
+<input type = “button” id=”b1″ value=”1″>
+
+<script>
+
+$(document).ready(function(){
+
+$("#b1").click(function(){
+
+$.ajax({
+
+method: "GET",
+
+url: "python/print1star();",
+
+data: {"place" : value},
+
+dataType: "text",
+
+success: function(result){
+
+var data=JSON.parse(result);
+
+console.log(result);
+
+}
+
+});
+
+});
+
+</script>
+
+
 
 <?php function print1star() {
 	echo "print1star";
