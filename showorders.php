@@ -131,6 +131,16 @@
 							</tr>';
 						$total += $row['amount'];
 					}?>
+
+					<button type="StoredProcedure" action="myspfunction()">How many puzzles need ordered?</button>
+					<?php
+						myspfunction(){
+							$sql = 'CALL puzzlestoorder()';
+							$query = mysqli_query($connection, $sql);
+							echo $query;
+						}
+
+					 ?>
 					</tbody>
 				</table>
 			</body>

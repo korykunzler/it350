@@ -1,22 +1,22 @@
 print("**Python onestar**")
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
 print("here one <br>")
 client = MongoClient('localhost', 27017)
 print("here 2 <br>")
-#db = ratingsdb
+db = client['ratingsdb']
 print("here three <br>")
-#collection = ratingsdb
+col = db['ratingsdb']
 
 db.insert({'username':'Joe Johnny', 'rating':'4'})
 print("inserted?")
 
-print(db.ratingsdb.find())
+print(col.find())
 print("I am here now<br>")
-for onestar in db.ratingsdb.find({'rating': '1'}):
+for onestar in col.find({'rating': '1'}):
     print("Test")
     print onestar['username', 'rating']
 
-#onestar = "db.ratingsdb.find({'rating': '1'})"
+#onestar = "col.find({'rating': '1'})"
 print("<br>How about now?<br>")
 #print(onestar)
 print("<br> End of python <br>")
