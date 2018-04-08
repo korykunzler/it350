@@ -22,7 +22,7 @@
       try{
         $sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
         echo("After sql0<br>");
-        $CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
+        $CID = mysqli_query($connection, $sql) or die(mysqli_error($connection));
       }catch(Exception $e){
         echo("Someone messed up. We will look into this.");
       }
