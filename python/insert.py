@@ -12,7 +12,8 @@ print(username, "<br>")
 print(rating, "<br>")
 print("About to insert")
 coll.insert({username:"username", rating: "rating"})
-print("<br>After insert statement")
+print("<br>After insert statement<br>")
+HttpResponseRedirect('/reviewpage.php/')
 #print("Starting printout... <br><br>")
 #or p in printall:
 #    print p

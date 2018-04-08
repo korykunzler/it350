@@ -25,7 +25,7 @@
 	  <option value="2">2</option>
 		<option value="1">1</option>
 	</select>
-<input type="submit" value="Submit">Submit Review<br>
+<input type="submit" value="Submit"><br>
 
 
 </form><br><br>
