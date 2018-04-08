@@ -18,14 +18,14 @@
 
 
 <form action="python/insert.php" method="post">
-	<br><select id="ratingselection">
+	<br><select name="ratingselection">
 	  <option value="5">5</option>
 	  <option value="4">4</option>
 	  <option value="3">3</option>
 	  <option value="2">2</option>
 		<option value="1">1</option>
 	</select>
-<button type="submit" value="Submit">Submit Review</button><br>
+<input type="submit" value="Submit">Submit Review<br>
 
 
 </form><br><br>
