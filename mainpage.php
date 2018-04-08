@@ -56,7 +56,7 @@ http://codingcyber.org/simple-login-script-php-and-mysql-64/
 	 -->
 
 
-	 <form action="python/purchase.php" method="post">
+	 <form action="purchase.php" method="post">
 		 <select name="purchasepuzzles">
 		 <?php
 		 $sql = mysqli_query($connection, "SELECT pname FROM Puzzles");
