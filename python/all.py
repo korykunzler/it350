@@ -9,10 +9,13 @@ coll = db['ratingsdb']
 #print("I am here now<br>")
 #print(db, "<db,coll>", coll)
 printall = coll.find()
-print("*************<br><br>")
+print("Starting printout... <br><br>")
 for p in printall:
     #print("Test<br>")
     print p
+    print("<br>")
+
+print("End of printout")
 
 #onestar = "col.find({'rating': '1'})"
 #print("<br>How about now?<br>")
