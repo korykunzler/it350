@@ -15,7 +15,7 @@ print("Now here")
 print(username, "<br>")
 print(rating, "<br>")
 
-coll.insertOne({username:"username", rating: "rating"})
+coll.insert({username:"username", rating: "rating"})
 print("<br>After insert statement")
 #print("Starting printout... <br><br>")
 #or p in printall:
