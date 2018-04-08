@@ -15,6 +15,7 @@
       echo("Grabbed variables from post<br>");
 
       $CID = "SELECT id FROM Customers WHERE username = '$username'";
+      echo("<br>-->");
       echo($CID);
       echo("<--Grabbed customer ID<br>");
       $sql = "INSERT INTO Orders (CustomerID, PuzzleName, Shipped) values('$CID','$puzzlename','0')";
