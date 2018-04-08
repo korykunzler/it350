@@ -14,6 +14,9 @@
       $username = $_SESSION['login_user']; //Receives the username/pwd from the post and saves them to variables
       $selection = ($_POST['ratingselection']);
     	 passthru("python insert.py, $username, $selection");
+       echo($username);
+       echo("<br>");
+       echo($selection);
     ?>
     <p> Back to php after python </p>
   </body>
