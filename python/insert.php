@@ -15,7 +15,7 @@
       $selection = $_POST['ratingselection'];
       echo($selection);
       $selection ="5";
-    	 passthru("python insert.py, sallsue, 5");
+    	 passthru("python insert.py $username $selection");
        echo($username);
        echo("<--<br>-->");
        echo($selection);
