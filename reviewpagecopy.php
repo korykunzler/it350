@@ -22,12 +22,41 @@
 
 </form><br><br>
 
+<a href="python/1star.php">Show one star ratings</a><br><br>
+<a href="python/2star.php">Show two star ratings</a><br><br>
+<a href ="python/3star.php">Show three star ratings</a><br><br>
+<a href ="python/4star.php">Show four star ratings</a><br><br>
+<a href ="python/5star.php">Show five star ratings</a><br><br>
 <a href ="python/all.php">Show all ratings</a><br><br>
 
 
 
 
-<?php
+<?php function print1star() {
+	echo "print1star";
+	 passthru("python 1star.py");
+}
+
+function print2star() {
+	echo "print2star";
+	 passthru("python 2star.py");
+}
+
+function print3star() {
+	echo "print3star";
+	 passthru("python 3star.py");
+}
+
+function print4star() {
+	echo "print4star";
+	 passthru("python 4star.py");
+}
+
+function print5star() {
+	echo "print5star";
+	 passthru("python 5star.py");
+}
+
 function printall() {
 	echo "printall";
 	 passthru("python printall.py");
