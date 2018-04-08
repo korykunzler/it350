@@ -14,7 +14,7 @@
       $puzzlename = $_POST['purchasepuzzles'];
       echo("Grabbed variables from post<br>");
 
-      $CID = "SELECT id FROM Customers WHERE username = $username";
+      $CID = "SELECT id FROM Customers WHERE username = '$username'";
       echo($CID);
       echo("<--Grabbed customer ID<br>");
       $sql = "INSERT INTO Orders (CustomerID, PuzzleName, Shipped) values('$CID','$puzzlename','0')";
@@ -23,7 +23,7 @@
       echo("Updated Orders Table<br>");
        //Need to query the customer ID and then insert into the Orders table w/ customerID, puzzlename, and shipped = 0
 
-       $sql2 = "UPDATE Puzzles SET quantity = (quantity -1) WHERE pname = $puzzlename";
+       $sql2 = "UPDATE Puzzles SET quantity = (quantity -1) WHERE pname = '$puzzlename'";
        echo("Second sql<br>");
        //Then need to update puzzles table to decrease quantity by 1
     ?>
