@@ -24,7 +24,7 @@ $sql = "INSERT INTO Customers (name, username, password, address, phone, email, 
 echo "<br>After sql statement<br>";
 $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
-//header("location:clogin.php");
+header("location:clogin.php");
 
 ?>
 
