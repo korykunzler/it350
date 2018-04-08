@@ -14,10 +14,10 @@
       $puzzlename = $_POST['purchasepuzzles'];
       echo("Grabbed variables from post<br>");
 
-      $table = "Customers";
-      $sql = "SELECT id FROM Customers WHERE username = '$username'";
+      //$table = "Customers";
+      //$sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
       echo("After sql0<br>")
-      $CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
+      $CID = "5"; //mysqli_query($connection, $sql0) or die(mysqli_error($connection));
       echo("<br>-->");
       echo($CID);
       echo("<--Grabbed customer ID<br>");
