@@ -15,8 +15,9 @@
       $selection = ($_POST['ratingselection']);
     	 passthru("python insert.py, $username, $selection");
        echo($username);
-       echo("<br>");
+       echo("<--<br>-->");
        echo($selection);
+       echo("<--");
     ?>
     <p> Back to php after python </p>
   </body>
