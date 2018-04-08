@@ -8,7 +8,7 @@ print("here three <br>")
 
 #print(db.ratingsdb())
 print("I am here now<br>")
-for printall in db.ratingsdb():
+for printall in ratingsdb():
     print("Test")
     print printall['username', 'rating']
 
