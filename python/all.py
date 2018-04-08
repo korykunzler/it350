@@ -9,7 +9,7 @@ print("here three <br>")
 print("I am here now<br>")
 printall = coll.find()
 print("*************")
-for p in printall
+for p in printall:
     print("Test<br>")
     print p['username', 'rating']
 
