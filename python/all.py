@@ -1,14 +1,13 @@
 print("**Python printall**")
-from pymongo.mongo_client import MongoClient
+from pymongo import MongoClient
 print("here one <br>")
 client = MongoClient('localhost', 27017)
 print("here 2 <br>")
 print("here three <br>")
-#col = db['ratingsdb']
-
-#print(db.ratingsdb())
+#db = client['it350']
+#coll = db['ratingsdb']
 print("I am here now<br>")
-for printall in ratingsdb():
+for printall in ratingsdb.find():
     print("Test")
     print printall['username', 'rating']
 
