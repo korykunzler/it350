@@ -56,8 +56,8 @@ http://codingcyber.org/simple-login-script-php-and-mysql-64/
 	 -->
 
 
-	 <form action="python/insert.php" method="post">
-		 <select name="puzzles">
+	 <form action="python/purchase.php" method="post">
+		 <select name="purchasepuzzles">
 		 <?php
 		 $sql = mysqli_query($connection, "SELECT pname FROM Puzzles");
 		 while ($row = $sql->fetch_assoc()){
@@ -65,7 +65,7 @@ http://codingcyber.org/simple-login-script-php-and-mysql-64/
 		 }
 		 ?>
 		 </select>
-	 <input type="submit" value="Submit"><br>
+	 <input type="submit" value="Add to order"><br>
 
 
 	 </form><br><br>
