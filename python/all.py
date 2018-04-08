@@ -8,10 +8,10 @@ db = client['it350']
 coll = db['ratingsdb']
 print("I am here now<br>")
 printall = coll.find()
-print("*************")
+print("*************<br><br>")
 for p in printall:
     print("Test<br>")
-    print p['username', 'rating']
+    print p
 
 #onestar = "col.find({'rating': '1'})"
 print("<br>How about now?<br>")
