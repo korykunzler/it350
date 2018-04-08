@@ -1,3 +1,4 @@
+import sys
 from pymongo import MongoClient
 client = MongoClient('localhost', 27017)
 db = client['ratingsdb']
@@ -7,6 +8,7 @@ print("Made it here")
 username = sys.argv[1]
 rating = sys.argv[2]
 
+print("Now here")
 print(username, "<br>")
 print(rating, "<br>")
 
