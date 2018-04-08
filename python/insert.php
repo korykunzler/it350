@@ -1,6 +1,6 @@
 <html>
   <body>
-    <p> Made it to all.php </p>
+    <p> Made it to insert.php </p>
     <?php
     	//echo "printall php<br>";
     	 passthru("python insert.py ");
