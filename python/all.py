@@ -1,26 +1,14 @@
-#print("**Python printall**")
 from pymongo import MongoClient
-#print("here one <br>")
 client = MongoClient('localhost', 27017)
-#print("here 2 <br>")
-#print("here three <br>")
 db = client['ratingsdb']
 coll = db['ratingsdb']
-#print("I am here now<br>")
-#print(db, "<db,coll>", coll)
+
 printall = coll.find()
 print("Starting printout... <br><br>")
 for p in printall:
-    #print("Test<br>")
     print p
     print("<br>")
-
-print("End of printout")
-
-#onestar = "col.find({'rating': '1'})"
-#print("<br>How about now?<br>")
-#print(onestar)
-#print("<br> End of python <br>")
+print("<br>End of printout")
 
 #http://api.mongodb.com/python/current/tutorial.html#making-a-connection-with-mongoclient
 #https://stackoverflow.com/questions/19781768/executing-python-script-with-php-variables
