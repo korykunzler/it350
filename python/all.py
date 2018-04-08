@@ -5,7 +5,7 @@ client = MongoClient('localhost', 27017)
 print("here 2 <br>")
 print("here three <br>")
 #db = client['it350']
-#coll = db['ratingsdb']
+coll = db['ratingsdb']
 print("I am here now<br>")
 printall = coll.find()
 print("*************")
