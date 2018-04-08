@@ -95,7 +95,7 @@ if (!$query) {
 	</style>
 </head>
 <body>
-	<h1>Puzzles</h1>
+	<h1>Puzzles for Sale</h1>
 	<table class="data-table">
 		<thead>
 			<tr>
