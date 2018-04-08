@@ -4,6 +4,9 @@ client = MongoClient('localhost', 27017)
 db = client['ratingsdb']
 coll = db['ratingsdb']
 
+username = sys.argv[1]
+rating = sys.argv[2]
+
 print("Now here")
 print(username, "<br>")
 print(rating, "<br>")
