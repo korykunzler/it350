@@ -7,8 +7,10 @@ print("here three <br>")
 #db = client['it350']
 #coll = db['ratingsdb']
 print("I am here now<br>")
-for printall in ratingsdb.find():
-    print("Test")
+printall = coll.find()
+print("*************")
+for each printall
+    print("Test<br>")
     print printall['username', 'rating']
 
 #onestar = "col.find({'rating': '1'})"
