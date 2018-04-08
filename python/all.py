@@ -7,6 +7,7 @@ print("here three <br>")
 db = client['it350']
 coll = db['ratingsdb']
 print("I am here now<br>")
+print(db, "<db,coll>", coll)
 printall = coll.find()
 print("*************")
 for p in printall:
