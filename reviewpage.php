@@ -3,14 +3,22 @@
 <html>
 	<head>
 		<title>Piece by Piece</title>
+		<?php // http://stackoverflow.com/questions/1545357/how-to-check-if-a-user-is-logged-in-in-php // need to double check this to be sure it won't let them here without logging in.
+			session_start();
+			if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+					echo "Thanks for logging in, " . $_SESSION['login_user'] . "!";
+			} else {
+					header("Location: clogin.php");
+				}
+		?>
 	</head>
 	<body>
 	<h3>Piece by Piece</h3>
 	<p> Welcome to the review site! Please leave us a review.</p>
 
 
-<form>
-	<br><select>
+<form action="python/insert.php" method="post">
+	<br><select id="ratingselection">
 	  <option value="5">5</option>
 	  <option value="4">4</option>
 	  <option value="3">3</option>
