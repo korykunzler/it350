@@ -9,14 +9,19 @@
         }
     ?>
     <?php
-    include_once 'connect.php';
-      $username = $_SESSION['login_user']; //Receives the username/pwd from the post and saves them to variables
-      $puzzlename = $_POST['purchasepuzzles'];
-      echo("Grabbed variables from post<br>");
+    try{
+      include_once 'connect.php';
+        $username = $_SESSION['login_user']; //Receives the username/pwd from the post and saves them to variables
+        $puzzlename = $_POST['purchasepuzzles'];
+        echo("Grabbed variables from post<br>");
+    }catch{
+      echo("Shakes head.");
+    }
+
 
       try{
         $sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
-        echo("After sql0<br>")
+        echo("After sql0<br>");
         $CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
       }catch
       {
