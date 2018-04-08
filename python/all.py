@@ -6,7 +6,7 @@ print("here 2 <br>")
 print("here three <br>")
 #col = db['ratingsdb']
 
-print(db.ratingsdb())
+#print(db.ratingsdb())
 print("I am here now<br>")
 for printall in db.ratingsdb():
     print("Test")
