@@ -9,9 +9,9 @@ print("here three <br>")
 print("I am here now<br>")
 printall = coll.find()
 print("*************")
-for each printall
+for p in printall
     print("Test<br>")
-    print printall['username', 'rating']
+    print p['username', 'rating']
 
 #onestar = "col.find({'rating': '1'})"
 print("<br>How about now?<br>")
