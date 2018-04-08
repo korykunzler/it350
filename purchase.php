@@ -20,7 +20,7 @@
 
 
       try{
-        $sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
+        $sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line was sending a 500 error
         echo("After sql0<br>");
         $CID = mysqli_query($connection, $sql) or die(mysqli_error($connection));
       }catch(Exception $e){
@@ -28,7 +28,7 @@
       }
 
       echo("<br>-->");
-      echo($CID);
+      echo($CID); //MAKING IT TO RIGHT HERE AND IT IS BREAKING. I NEED TO GO TO BED.
       echo("<--Grabbed customer ID<br>");
       try{
           $sql = "INSERT INTO Orders (CustomerID, PuzzleName, Shipped) values('$CID','$puzzlename','0')";
