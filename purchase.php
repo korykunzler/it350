@@ -14,17 +14,16 @@
         $username = $_SESSION['login_user']; //Receives the username/pwd from the post and saves them to variables
         $puzzlename = $_POST['purchasepuzzles'];
         echo("Grabbed variables from post<br>");
-    }catch{
+    }catch(Exception $e){
       echo("Shakes head.");
     }
 
 
       try{
-        $sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
-        echo("After sql0<br>");
-        $CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
-      }catch
-      {
+        //$sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
+        //echo("After sql0<br>");
+        //$CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
+      }catch(Exception $e){
         echo("Someone messed up. We will look into this.");
       }
 
@@ -37,7 +36,7 @@
       $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
       echo("Updated Orders Table<br>");
        //Need to query the customer ID and then insert into the Orders table w/ customerID, puzzlename, and shipped = 0
-     }catch{
+     }catch(Exception $e){
        echo("Someone else messed up. This is getting serious.");
      }
 
@@ -46,7 +45,7 @@
        echo("Second sql<br>");
        $result2 = mysqli_query($connection, $sql) or die(mysqli_error($connection));
        echo("Updated Orders Table<br>");
-     }catch{
+     }catch(Exception $e){
        echo("Will someone get me a baseball bat...?");
      }
 
