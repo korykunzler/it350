@@ -20,7 +20,7 @@ $email = $_POST['email'];
 $loggedin = "0";
 echo "<br>I made it here.<br>";
 
-$sql = "INSERT INTO Puzzles (name, username, password, address, phone, email, loggedin) values('$name','$username','$password','$address','$phone','$email','$loggedin')";
+$sql = "INSERT INTO Customers (name, username, password, address, phone, email, loggedin) values('$name','$username','$password','$address','$phone','$email','$loggedin')";
 echo "<br>After sql statement<br>";
 $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 
