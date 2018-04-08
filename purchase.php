@@ -21,7 +21,7 @@
 
       try{
         //$sql = "SELECT id FROM Customers WHERE username = '$username'"; //Something in this line is sending a 500 error
-        //echo("After sql0<br>");
+        echo("After sql0<br>");
         //$CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
       }catch(Exception $e){
         echo("Someone messed up. We will look into this.");
@@ -31,11 +31,11 @@
       echo($CID);
       echo("<--Grabbed customer ID<br>");
       try{
-      $sql = "INSERT INTO Orders (CustomerID, PuzzleName, Shipped) values('$CID','$puzzlename','0')";
-      echo("After sql statement<br>");
-      $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
-      echo("Updated Orders Table<br>");
-       //Need to query the customer ID and then insert into the Orders table w/ customerID, puzzlename, and shipped = 0
+          $sql = "INSERT INTO Orders (CustomerID, PuzzleName, Shipped) values('$CID','$puzzlename','0')";
+          echo("After sql statement<br>");
+          $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
+          echo("Updated Orders Table<br>");
+           //Need to query the customer ID and then insert into the Orders table w/ customerID, puzzlename, and shipped = 0
      }catch(Exception $e){
        echo("Someone else messed up. This is getting serious.");
      }
