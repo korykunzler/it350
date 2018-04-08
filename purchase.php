@@ -14,9 +14,9 @@
       $puzzlename = $_POST['purchasepuzzles'];
       echo("Grabbed variables from post<br>");
 
-      $sql0 = "SELECT id FROM Customers WHERE username = '$username'";
-      echo("After sql0<br>")
-      $CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
+      #$sql0 = "SELECT id FROM Customers WHERE username = '$username'";
+      #echo("After sql0<br>")
+      #$CID = mysqli_query($connection, $sql0) or die(mysqli_error($connection));
       echo("<br>-->");
       echo($CID);
       echo("<--Grabbed customer ID<br>");
